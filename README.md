@@ -9,7 +9,6 @@ $ openssl genrsa -out keys/id_rsa 4096
 Public key:
 ```
 $ openssl rsa -in keys/id_rsa -pubout -out keys/id_rsa.pub
-
 ```
 
 ## Generating licence
