@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-jwt-licence"
+	"github.com/IgorPidik/go-jwt-licence"
 	"log"
 	"time"
 )
