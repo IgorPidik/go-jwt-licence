@@ -26,6 +26,10 @@ func NewLicenceValidator(publicKeyPath string) (*LicenceValidator, error) {
 	return &LicenceValidator{PublicKey: publicKey}, nil
 }
 
+func NewLicenceValidatorFromPublicKey(publicKey *rsa.PublicKey) *LicenceValidator {
+	return &LicenceValidator{PublicKey: publicKey}
+}
+
 func (lv *LicenceValidator) ValidateLicence(licence string) (*LicenceData, error) {
 	licenceBytes, decodingErr := base64.StdEncoding.DecodeString(licence)
 	if decodingErr != nil {
